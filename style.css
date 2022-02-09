@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  position: relative;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+#fixedNode {
+  height: 100px;
+  width: 100px;
+  bottom: 0;
+  position: absolute;
+  background: rgb(161, 7, 102);
+}
+
+.node {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background: green;
+}
+
+[grid-cell] {
+  position: absolute;
+  border: 1px solid #aaa;
+  width: 49px;
+  height: 49px;
+  z-index: -1;
+}

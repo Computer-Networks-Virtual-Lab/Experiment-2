@@ -2,11 +2,11 @@ var container = $("#container");
 var fixedNode = $("#fixedNode");
 var pointer = 0;
 
-var width = 50;
-var height = 50;
-var rows = 14;
-var cols = 30;
-var snap = 50;
+var width = 20;
+var height = 20;
+var rows = 34;
+var cols = 70;
+var snap = 10;
 
 // CREATING CLONES OF PINK BOX
 function onClone() {

@@ -6,7 +6,7 @@ var width = 20;
 var height = 20;
 var rows = 34;
 var cols = 70;
-var snap = 10;
+var snap = 20;
 
 // CREATING CLONES OF PINK BOX
 function onClone() {

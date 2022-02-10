@@ -1,5 +1,6 @@
 var container = $("#container");
 var fixedNode = $("#fixedNode");
+var fixedSwitch = $("#fixedSwitch");
 var pointer = 0;
 
 var width = 20;
@@ -8,9 +9,9 @@ var rows = 34;
 var cols = 70;
 var snap = 20;
 
-// CREATING CLONES OF PINK BOX
-function onClone() {
-  console.log("inside clone");
+// CREATING CLONES OF NODE
+function onCloneNode() {
+  console.log("inside node clone");
 
   $(`<div class='node node${pointer}'></div>`)
     .css({ top: 0, left: 0 })
@@ -31,7 +32,32 @@ function onClone() {
   });
   pointer += 1;
 }
-fixedNode.click(onClone);
+fixedNode.click(onCloneNode);
+
+// CREATING CLONES OF SWICTH
+function onCloneSwitch() {
+  console.log("inside switch clone");
+
+  $(`<div class='switch switch${pointer}'></div>`)
+    .css({ top: 0, left: 0 })
+    .prependTo(container);
+
+  const switchVar = $(`.switch${pointer}`);
+  console.log("switchVar :: ", switchVar);
+
+  Draggable.create(switchVar, {
+    bounds: container,
+    onDrag: function () {
+      TweenLite.to(switchVar, 0.5, {
+        x: Math.round(this.x / snap) * snap,
+        y: Math.round(this.y / snap) * snap,
+        ease: Back.easeOut.config(2),
+      });
+    },
+  });
+  pointer += 1;
+}
+fixedSwitch.click(onCloneSwitch);
 
 // BACKGROUND GRIDS
 for (var i = 0; i < rows * cols; i++) {

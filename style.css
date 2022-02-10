@@ -14,19 +14,33 @@ body {
   width: 100px;
   bottom: 0;
   position: absolute;
-  background: rgb(161, 7, 102);
+  background: rgb(36, 136, 114);
 }
-
 .node {
   height: 20px;
   width: 20px;
   position: absolute;
-  background: green;
+  background: rgb(36, 136, 114);
+}
+
+#fixedSwitch {
+  height: 100px;
+  width: 100px;
+  bottom: 0;
+  left: 100px;
+  position: absolute;
+  background: rgb(68, 68, 63);
+}
+.switch {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background: rgb(68, 68, 63);
 }
 
 [grid-cell] {
   position: absolute;
-  border: 0.5px solid #aaa;
+  border: 0.5px solid #ccc;
   width: 20px;
   height: 20px;
   z-index: -1;

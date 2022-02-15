@@ -1,47 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --bg-color: #191919;
+  --sub-bg-color: #2d2d2d;
+  --sub-bg-dark-color: #292929;
+  --text-color: #dbdbdb;
+  --border-color: #707070;
+
+  --switch-color: #0c7a6f;
+  --node-color: #83d1c9;
+
+  --success-color: #64e251;
+  --fail-color: #ab0000;
+}
+
 body {
+  background-color: var(--bg-color);
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   position: relative;
 }
 
+/* ######################### */
+/* ## TOPOLOGY PLAYGROUND ## */
+/* ######################### */
+.flex {
+  display: flex;
+  justify-content: center;
+}
 #container {
-  height: 100vh;
-  width: 100vw;
+  height: 67.5vh;
+  width: 74.3vw;
   position: relative;
 }
 
-#fixedNode {
-  height: 100px;
+.boxes_container {
+  background-color: var(--sub-bg-color);
   width: 100px;
-  bottom: 0;
+  height: 200px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
   position: absolute;
-  background: rgb(36, 136, 114);
+  bottom: 0;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.boxes_container_heading {
+  color: var(--text-color);
+}
+#fixedNode {
+  height: 50px;
+  width: 50px;
+  background: var(--node-color);
+  margin: 5px;
 }
 .node {
   height: 20px;
   width: 20px;
   position: absolute;
-  background: rgb(36, 136, 114);
+  background: var(--node-color);
 }
-
 #fixedSwitch {
-  height: 100px;
-  width: 100px;
-  bottom: 0;
-  left: 100px;
-  position: absolute;
-  background: rgb(68, 68, 63);
+  height: 50px;
+  width: 50px;
+  background: var(--switch-color);
+  margin: 5px;
 }
 .switch {
   height: 20px;
   width: 20px;
   position: absolute;
-  background: rgb(68, 68, 63);
+  background: var(--switch-color);
 }
-
+.flex {
+  display: flex;
+  justify-content: center;
+}
 [grid-cell] {
   position: absolute;
-  border: 0.5px solid #ccc;
+  border: 0.5px solid #aaa;
   width: 20px;
   height: 20px;
   z-index: -1;
+}
+
+/* ############ */
+/* ## HEADER ## */
+/* ############ */
+#header_container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+.heading {
+  background-color: var(--sub-bg-color);
+  color: var(--text-color);
+  width: 55vw;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0 0 5rem 5rem;
+  margin-bottom: 2rem;
+}
+
+/* ############ */
+/* ## SELECT ## */
+/* ############ */
+.options {
+  display: flex;
+  align-items: center;
+}
+.options p {
+  color: var(--text-color);
+  margin-right: 1rem;
+}
+.select {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: var(--sub-bg-dark-color);
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+.select:hover::after {
+  color: #f39c12;
+}
+select {
+  outline: 0;
+  border: 0;
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--sub-bg-color);
+  cursor: pointer;
+  font-size: 1rem;
+}
+select::-ms-expand {
+  display: none;
 }

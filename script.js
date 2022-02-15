@@ -5,8 +5,8 @@ var pointer = 0;
 
 var width = 20;
 var height = 20;
-var rows = 34;
-var cols = 70;
+var rows = 24;
+var cols = 57;
 var snap = 20;
 
 // CREATING CLONES OF NODE

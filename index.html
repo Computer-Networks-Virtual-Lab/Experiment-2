@@ -14,9 +14,34 @@
   </head>
 
   <body>
-    <div id="container">
-      <div id="fixedNode"></div>
-      <div id="fixedSwitch"></div>
+    <div class="wrapper">
+      <div id="header_container">
+        <div class="heading">
+          <h1>TOPOLOGY EVALUATOR</h1>
+        </div>
+
+        <div class="options">
+          <p>Which topology would you like to evaluate?</p>
+          <div class="select">
+            <select id="configuration">
+              <option value="0">Choose Topology</option>
+              <option value="1">Bus</option>
+              <option value="2">Star</option>
+              <option value="3">Ring</option>
+              <option value="3">Mesh</option>
+              <option value="3">Tree</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div id="container"></div>
+      </div>
+      <div class="boxes_container">
+        <p class="boxes_container_heading">NODES</p>
+        <div id="fixedNode"></div>
+        <div id="fixedSwitch"></div>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

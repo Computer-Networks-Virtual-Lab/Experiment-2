@@ -62,6 +62,7 @@ body {
   width: 20px;
   position: absolute;
   background: var(--node-color);
+  z-index: 1;
 }
 #fixedSwitch {
   height: 50px;
@@ -74,6 +75,7 @@ body {
   width: 20px;
   position: absolute;
   background: var(--switch-color);
+  z-index: 1;
 }
 .flex {
   display: flex;
@@ -84,7 +86,7 @@ body {
   border: 0.5px solid #aaa;
   width: 20px;
   height: 20px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 /* ############ */

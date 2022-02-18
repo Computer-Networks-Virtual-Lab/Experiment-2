@@ -63,5 +63,14 @@ fixedSwitch.click(onCloneSwitch);
 for (var i = 0; i < rows * cols; i++) {
   var y = Math.floor(i / cols) * height;
   var x = (i * width) % (cols * width);
-  $("<div grid-cell></div>").css({ top: y, left: x }).prependTo(container);
+  $(`<div grid-cell class='grid'></div>`).css({ top: y, left: x }).prependTo(container);
 }
+
+// document.querySelectorAll(".grid").forEach(item => {
+//   item.addEventListener('click', event => {
+//     // var x1 = gsap.getProperty(item, 'x');
+//     // var y1 = gsap.getProperty(itme, 'y');
+//     // console.log(`X: ${x1}, Y: ${y1}`);
+//     console.log("clicked");
+//   })
+// })

@@ -9,6 +9,7 @@
 
   --switch-color: #0c7a6f;
   --node-color: #83d1c9;
+  --grid-color: #3f3f3fa3;
 
   --success-color: #64e251;
   --fail-color: #ab0000;
@@ -19,6 +20,9 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   position: relative;
+}
+button:hover {
+  cursor: pointer;
 }
 
 /* ######################### */
@@ -41,12 +45,14 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 5px;
   position: absolute;
-  bottom: 0;
-  left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.node_container {
+  bottom: 0;
+  left: 10px;
 }
 .boxes_container_heading {
   color: var(--text-color);
@@ -83,10 +89,9 @@ body {
 }
 [grid-cell] {
   position: absolute;
-  border: 0.5px solid #aaa;
+  border: 0.5px solid var(--grid-color);
   width: 20px;
   height: 20px;
-  /* z-index: -1; */
 }
 
 /* ############ */
@@ -155,4 +160,30 @@ select {
 }
 select::-ms-expand {
   display: none;
+}
+
+/* ########## */
+/* ## LINE ## */
+/* ########## */
+.line_container {
+  bottom: 0;
+  right: 10px;
+}
+#addBtn {
+  min-width: 60%;
+  padding: 5px;
+  border: 0;
+  background-color: var(--border-color);
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+#setBtn {
+  min-width: 60%;
+  padding: 5px;
+  border: 0;
+  background-color: var(--border-color);
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: 500;
 }

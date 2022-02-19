@@ -68,7 +68,7 @@ button:hover {
   width: 20px;
   position: absolute;
   background: var(--node-color);
-  z-index: 1;
+  z-index: 0;
 }
 #fixedSwitch {
   height: 50px;
@@ -81,17 +81,22 @@ button:hover {
   width: 20px;
   position: absolute;
   background: var(--switch-color);
-  z-index: 1;
+  z-index: 0;
+}
+#fixedNode:hover,
+#fixedSwitch:hover {
+  cursor: pointer;
 }
 .flex {
   display: flex;
   justify-content: center;
 }
-[grid-cell] {
+.grid {
   position: absolute;
   border: 0.5px solid var(--grid-color);
   width: 20px;
   height: 20px;
+  z-index: -1;
 }
 
 /* ############ */

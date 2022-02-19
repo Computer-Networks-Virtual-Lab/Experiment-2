@@ -4,7 +4,10 @@ var x1 = 0
     var y2 = 0
 
     document.querySelector('#setline').addEventListener('click', () => {
-    $(`<line x1="${x1 + 10}" y1="${y1 + 10}" x2="${x2 + 10}" y2="${y2 + 10}" style='stroke: white; stroke-width: 3px'></line>`).prependTo(document.querySelector('svg'));
+        console.log('setting up line');
+        $(`<line x1="${y1 + 10}" y1="${x1 + 10}" x2="${y2 + 10}" y2="${x2 + 10}" style='stroke: white; stroke-width: 3px'></line>`).prependTo(document.querySelector('svg'));
+        $('.lines').html($('.lines').html());
+        // $(#container').html($('#container').html());
     })
 
 document.querySelector('#fixedline').addEventListener('click', () => {
